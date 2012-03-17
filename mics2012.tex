@@ -159,19 +159,38 @@ adams601@morris.umn.edu
 	To construct a new object you just use the "new" special form.
 	\begin{verbatim}
 	(new StringBuffer "fred")
-	;;returns #<StringBuffer fred>
+	;;Returns #<StringBuffer fred>
 	\end{verbatim} 
 	
 	To quickly modify an object the macro doto is available \footnote[1]{A macro is a textual substitution. Essentially it maps an input pattern to an output pattern before any evaluation happens}. The doto first takes a call to new, then performs the rest of the supplied arguments on that object, and finally returns the resulting object.
 	\begin{verbatim}
 	(doto (new StringBuffer "fred") 
 	  (.setCharAt 0 \F) (.append " is a nice guy!"))
-	;;returns #<StringBuffer Fred is a nice guy!>
+	;;Returns #<StringBuffer Fred is a nice guy!>
 	\end{verbatim}
 	Doto is very handy for doing sequences of set methods right after you construct an object.
 	
 	\subsection{Making Objects in Clojure}
-	Clojure also provides 
+	There are problems that cannot be effectively solved without creating custom classes. In particular gui programming in swing is quite difficult without the ability to extend the standard swing classes. Proxy and gen-class are the two functions provided by Clojure to implement, extend, or create Java classes. 
+	\subsubsection{Proxy}
+	It has been said that Clojure does Java better than Java\cite{halloway:better}. I think this is most true when using proxy. It is very common when programming in Swing in particular. When creating listeners to attach to buttons or other interactive interface devices it is very common to implement many different listeners. Proxy simplifies this process by allowing you to define a single superclass with methods that will work for your interface in most circumstances; and when you need to attach a listener instead of creating an entirely new subclass use proxy to create a new class that overwrites a few methods and inherits the rest. 
+	
+	Proxy is a macro that takes in two vectors and then a variable number of method declarations and returns a new object. The first vector declares which Java classes the proxy object will extend and which interfaces it implements. The second vector is a list of arguments (which can be empty) to be passed to the superclass constructor. Any other arguments that are passed to proxy are method declarations\cite{cloj:interop}. 
+	
+	For the following proxy examples I will be using the following basic java interface:
+	
+	\begin{verbatim}
+	public interface TestInterface {
+		int square(int x);
+	}
+	\end{verbatim}
+	This interface is in a separate interface file and is then imported into the following Clojure file.
+	\begin{verbatim}
+	(def test-inter (proxy [TestInterface] [] (square [x] (* x x))))
+	(. test-inter square 5)
+	;;Returns 25
+	\end{verbatim}
+	
 	
 \section{Suggestions}\label{sec:sugg}
 

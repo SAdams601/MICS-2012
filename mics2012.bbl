@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{halloway:better}
+{\sc Halloway, S.}
+\newblock Clojure-java interop: A better java than java.
+\newblock QCon.
+
 \bibitem{cloj:interop}
 {\sc Hickey, R.}
 \newblock Java interop, Mar. 2012.
