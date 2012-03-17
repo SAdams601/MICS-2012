@@ -1,7 +1,12 @@
 \begin{thebibliography}{1}
 
-\bibitem{cloj:rationale}
+\bibitem{cloj:interop}
 {\sc Hickey, R.}
-\newblock Rationale, Mar. 2012.
+\newblock Java interop, Mar. 2012.
+
+\bibitem{wiki}
+{\sc Wikipedia}.
+\newblock Clojure --- wikipedia{,} the free encyclopedia, 2012.
+\newblock [Online; accessed 13-March-2012].
 
 \end{thebibliography}

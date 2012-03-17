@@ -51,7 +51,8 @@
 \usepackage{color} %For Comments
 \usepackage[all]{xy}
 \usepackage{float}
-\usepackage{subfigure} 
+\usepackage{subfigure}
+\usepackage{parskip} 
 
 \include{2012_macros}
 
@@ -103,18 +104,75 @@ adams601@morris.umn.edu
 \newpage
 \setcounter{page}{1}
 
-\section{Introduction}\label{sec:intro}
-	The Clojure programming language was first released in 2007. Clojure was designed with several things in mind \cite{cloj:rationale}:
-	\begin{itemize}
-	\item Functional Programming
-	\item Concurrency
-	\item LISP
-	\item "Symbiotic" with an established platform 
-	\end{itemize}
-	These items are the main  
+\section{An Introduction to Clojure}\label{sec:intro}
+	Clojure is a programming language released in 2007 by Rich Hickey \cite{wiki}. Clojure is part of the LISP family of languages. Some brief examples of LISP-like syntax for those unfamiliar are:
+	\begin{verbatim}
+	(+ 2 3)
+	\end{verbatim}
+	Clojure uses prefix notation. To call a function you open a new list, the first thing in this list is the function name followed by the arguments. In the above case the function "+" takes in the two ints 2 and 3 and will return 5. Also note that:
+	\begin{verbatim}
+	(+ 2 3 4)
+	\end{verbatim}
+	Is a valid function call that returns 9. Clojure supports defining functions with a variable number of arguments. Clojure also includes several very powerful features for working with functions. The first allows for functions to be passed to other functions. 
+	\begin{verbatim}
+		(defn square [x] 
+		  (* x x))
+		
+		(map square [1 2 3 4 5])
+	\end{verbatim}
+	The example above does a few things. First a new function named square is defined; square takes in one argument named x and multiplies it by itself. Then the built in Clojure function map is called. Map takes in a function and a collection and applies the function to every element of the collection. In the example the call to map will return the vector [1 4 9 16 25]. 
+	
+	Clojure also supports anonymous functions. 
+	\begin{verbatim}
+	(defn all-same [vect]
+      (cond 
+        (empty? vect) true
+        :else (every? (fn [x] (= (first vect) x)) (rest vect)) 
+      )
+    )
+	\end{verbatim}
+	This example function takes in a vector and checks if every element in that vector is the same. The "fn" function tells the compiler that a new function is being defined within the current scope (in this case the scope is the function all-same.) In this case the anonymous function takes the first element of vect and checks if it is equal to the argument x. The outer function every? takes a function and a collection, and returns true if the function returns true for every element in the collection. Using an anonymous function here allows for the function passed to every? to use the first element in vect which would not be available to another function because it would be out of scope.
 
-\section{Background}\label{sec:bg}
-
+\section{Current Java Interoperability}\label{sec:bg}
+	A major feature of Clojure is that it runs on the JVM. Since Clojure and Java code both compile down to JVM bytecode Clojure can call code written in Java. I will now briefly go over the primary methods for calling Java code.
+	
+	\subsection{The Dot Special form}
+	The simplest way to call Java methods is with the dot(".") special form. The dot special form will first take a class member or class name then a method name then the arguments the method takes \cite{cloj:interop}. Here are a few examples of the dot in use.
+	\begin{verbatim}
+	(. "fred" toUpperCase)
+	;;This will return "FRED".
+	(.toUpperCase "fred")
+	;;This also returns "FRED".
+	\end{verbatim}
+	The second case will actually expand into the first call and is just a shortcut for accessing fields or methods. There are a few more shortcuts to make accessing static Java methods and objects.
+	
+	\begin{verbatim}
+	(Math/PI)
+	;;Returns 3.141592653589793
+	(Math/abs -2)
+	;;Returns 2
+	\end{verbatim}
+	
+	\subsection{Using Objects in Clojure}
+	Static methods are only a small part of Java. Without effective ways of dealing with objects the usefulness of Java Clojure interop would be severely limited. Fortunately Clojure provides a full set of features that makes working with Java fairly easy.
+	
+	To construct a new object you just use the "new" special form.
+	\begin{verbatim}
+	(new StringBuffer "fred")
+	;;returns #<StringBuffer fred>
+	\end{verbatim} 
+	
+	To quickly modify an object the macro doto is available \footnote[1]{A macro is a textual substitution. Essentially it maps an input pattern to an output pattern before any evaluation happens}. The doto first takes a call to new, then performs the rest of the supplied arguments on that object, and finally returns the resulting object.
+	\begin{verbatim}
+	(doto (new StringBuffer "fred") 
+	  (.setCharAt 0 \F) (.append " is a nice guy!"))
+	;;returns #<StringBuffer Fred is a nice guy!>
+	\end{verbatim}
+	Doto is very handy for doing sequences of set methods right after you construct an object.
+	
+	\subsection{Making Objects in Clojure}
+	Clojure also provides 
+	
 \section{Suggestions}\label{sec:sugg}
 
 \section{Conclusion and Future Work}\label{sec:con}

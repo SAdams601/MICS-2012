@@ -2,47 +2,47 @@ This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: mics2012.aux
 The style file: ACM.bst
 Database file #1: mics2012bibliography.bib
-Warning--entry type for "cloj:rationale" isn't style-file defined
---line 9 of file mics2012bibliography.bib
-You've used 1 entry,
+Warning--entry type for "cloj:interop" isn't style-file defined
+--line 17 of file mics2012bibliography.bib
+You've used 2 entries,
             2253 wiz_defined-function locations,
-            531 strings with 3934 characters,
-and the built_in function-call counts, 225 in all, are:
-= -- 17
-> -- 7
+            535 strings with 4026 characters,
+and the built_in function-call counts, 437 in all, are:
+= -- 36
+> -- 14
 < -- 0
-+ -- 3
-- -- 2
-* -- 12
-:= -- 41
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 4
++ -- 6
+- -- 4
+* -- 20
+:= -- 75
+add.period$ -- 5
+call.type$ -- 2
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 8
-empty$ -- 24
-format.name$ -- 2
-if$ -- 45
+cite$ -- 2
+duplicate$ -- 16
+empty$ -- 47
+format.name$ -- 4
+if$ -- 91
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 2
 missing$ -- 0
-newline$ -- 7
-num.names$ -- 2
-pop$ -- 9
+newline$ -- 12
+num.names$ -- 4
+pop$ -- 18
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 6
 quote$ -- 0
-skip$ -- 8
+skip$ -- 15
 stack$ -- 0
-substring$ -- 5
-swap$ -- 2
+substring$ -- 10
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 8
 warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 10
+while$ -- 4
+width$ -- 3
+write$ -- 20
 (There was 1 warning)
