@@ -52,7 +52,8 @@
 \usepackage[all]{xy}
 \usepackage{float}
 \usepackage{subfigure}
-\usepackage{parskip} 
+\usepackage{parskip}
+\usepackage{float} 
 
 \include{2012_macros}
 
@@ -105,7 +106,7 @@ adams601@morris.umn.edu
 \setcounter{page}{1}
 
 \section{An Introduction to Clojure}\label{sec:intro}
-	Clojure is a programming language released in 2007 by Rich Hickey \cite{wiki}. Clojure is part of the LISP family of languages. Some brief examples of LISP-like syntax are:
+	Clojure is a programming language released in 2007 by Rich Hickey \cite{wiki}. Clojure is part of the Lisp family of languages. Some brief examples of Lisp-like syntax are:
 	\begin{verbatim}
 	(+ 2 3)
 	\end{verbatim}
@@ -213,7 +214,7 @@ adams601@morris.umn.edu
 	There can be more functions than just square but they have to be defined in the interface as well.
 	
 	\subsubsection{Gen-class}
-	Proxy is limited by what is defined in a super class or Java interface, on the other hand, gen-class is designed for implementing fully featured Java classes. Gen-class consists of a set of options which are represented as key value pairs. The keys consist of Clojure keywords which are just symbols that begin with a ":." Gen-class currently supports fifteen different options. I will only cover a select few of these options here, the complete specification can be found in \cite{docs:genClass} or \cite{api:genClass}. The examples below were taken from~\cite{kotka}:
+	Proxy is limited by what is defined in a super class or Java interface, on the other hand, gen-class is designed for implementing fully featured Java classes. Gen-class consists of a set of options which are represented as key value pairs. The keys consist of Clojure keywords which are just symbols that begin with a ":." Gen-class currently supports fifteen different options. The examples below were taken from~\cite{kotka}:
 	
 	\begin{verbatim}
 	(ns some.Example)
@@ -232,8 +233,8 @@ adams601@morris.umn.edu
 	(def aClass (new some.Example))
 	;;This constructs a new instance of the object
 	(.toString aClass)
-	;;This returns the string "Hello, world!" because the method-toString function 
-	;;in the class definition has the correct prefix for the object.
+	;;Returns "Hello, world!" because method-toString 
+	;;has the correct prefix.
 	\end{verbatim}
 	
 	This does not make a lot of sense until you see that multiple classes can be defined in a single file.
@@ -258,10 +259,22 @@ adams601@morris.umn.edu
 	  "I'm an B.")
 	\end{verbatim}
 	
-	When you call toString on one of these objects it will return the correct result depending on the type of the object in question. 
-\section{Suggestions}\label{sec:sugg}
+	When you call toString on one of these objects it will return the correct result depending on the type of the object in question. I only covered a select few of the options available to gen-class, the complete specification can be found in \cite{docs:genClass} or \cite{api:genClass}. 
 
-\section{Conclusion and Future Work}\label{sec:con}
+		
+\section{Discussion and Conclusion}\label{sec:sugg}
+	In the larger scheme of the Clojure language gen-class and proxy have very limited applications. Even within the ways Clojure has of defining types that generate Java classes proxy and gen-class are in the minority. Figure~\ref{type:flow} displays a  flowchart for determining which form to use to define a new type.
+	
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=.55]{images/choosingtypeforms.png}
+	\caption{Flowchart for choosing the correct type definition form, from \cite{choosing-types}\label{type:flow}}
+	\end{center}	
+	\end{figure}
+	
+	Gen-class and proxy are the two functions that are listed in the "interop zone." The interop zone is where Clojure's native abstractions no longer apply\cite{choosing-types}. Future directions of this project may include trying to bridge the gap between other Clojure type definitions and gen-class and proxy. This may include wrapping gen-class or proxy or extending the other Clojure type definitions so that to the end programmer all Clojure defined types look and feel like Clojure. 
+	Additionally the information about Clojure-Java interop are scattered throughout many sources. A reasonable goal of this project is to collect this information in one place, this should include all of the relevant documentation, as well as examples and tutorials.
+	In the forward to The Joy of Clojure\cite{joy} Steve Yegge states that it is rather surprising that a Lisp dialect has suddenly become "fashionable" again despite Clojure's lack of a killer app like Ruby has with Rails. In his contemplation on why this is he states that perhaps "the killer app for Clojure is the JVM itself. Everyone's fed up with the Java language, but understandably we don't want to abandon our investment in the Java Virtual Machine and its capabilities: the libraries, the configuration, the monitoring, and the all the other entirely valid reasons we still use it." I think that this quote simultaneously illustrates the reasons why Clojure is so compelling and why it's Java interoperability needs to be as good as possible.
 
 
 

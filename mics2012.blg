@@ -3,51 +3,59 @@ The top-level auxiliary file: mics2012.aux
 The style file: ACM.bst
 Database file #1: mics2012bibliography.bib
 Warning--entry type for "cloj:interop" isn't style-file defined
---line 17 of file mics2012bibliography.bib
+--line 18 of file mics2012bibliography.bib
 Warning--entry type for "docs:genclass" isn't style-file defined
---line 31 of file mics2012bibliography.bib
+--line 33 of file mics2012bibliography.bib
 Warning--entry type for "cloj:structs" isn't style-file defined
---line 39 of file mics2012bibliography.bib
+--line 42 of file mics2012bibliography.bib
+Warning--entry type for "api:genClass" isn't style-file defined
+--line 51 of file mics2012bibliography.bib
+Warning--entry type for "kotka" isn't style-file defined
+--line 60 of file mics2012bibliography.bib
+Warning--entry type for "choosing-types" isn't style-file defined
+--line 68 of file mics2012bibliography.bib
+Warning--string name "july" is undefined
+--line 71 of file mics2012bibliography.bib
 Warning--empty booktitle in halloway:better
-You've used 5 entries,
+You've used 9 entries,
             2253 wiz_defined-function locations,
-            546 strings with 4176 characters,
-and the built_in function-call counts, 1069 in all, are:
-= -- 89
-> -- 35
+            562 strings with 4494 characters,
+and the built_in function-call counts, 2004 in all, are:
+= -- 177
+> -- 68
 < -- 0
-+ -- 15
-- -- 10
-* -- 50
-:= -- 176
-add.period$ -- 12
-call.type$ -- 5
-change.case$ -- 20
++ -- 30
+- -- 20
+* -- 95
+:= -- 330
+add.period$ -- 27
+call.type$ -- 9
+change.case$ -- 37
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 46
-empty$ -- 116
-format.name$ -- 10
-if$ -- 225
+cite$ -- 10
+duplicate$ -- 83
+empty$ -- 208
+format.name$ -- 20
+if$ -- 425
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 1
-newline$ -- 25
-num.names$ -- 10
-pop$ -- 45
+int.to.str$ -- 9
+missing$ -- 3
+newline$ -- 48
+num.names$ -- 18
+pop$ -- 79
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 28
 quote$ -- 0
-skip$ -- 36
+skip$ -- 60
 stack$ -- 0
-substring$ -- 25
-swap$ -- 9
+substring$ -- 46
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
+type$ -- 34
 warning$ -- 1
-while$ -- 10
-width$ -- 6
-write$ -- 45
-(There were 4 warnings)
+while$ -- 18
+width$ -- 10
+write$ -- 93
+(There were 8 warnings)
