@@ -1,5 +1,9 @@
 \begin{thebibliography}{1}
 
+\bibitem{docs:genClass}
+{\sc clojuredocs.org}.
+\newblock gen-class, Mar. 2012.
+
 \bibitem{halloway:better}
 {\sc Halloway, S.}
 \newblock Clojure-java interop: A better java than java.
@@ -8,6 +12,10 @@
 \bibitem{cloj:interop}
 {\sc Hickey, R.}
 \newblock Java interop, Mar. 2012.
+
+\bibitem{cloj:structs}
+{\sc Hickey, R.}
+\newblock Rationale, Mar. 2012.
 
 \bibitem{wiki}
 {\sc Wikipedia}.

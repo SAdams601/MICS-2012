@@ -4,46 +4,50 @@ The style file: ACM.bst
 Database file #1: mics2012bibliography.bib
 Warning--entry type for "cloj:interop" isn't style-file defined
 --line 17 of file mics2012bibliography.bib
+Warning--entry type for "docs:genclass" isn't style-file defined
+--line 31 of file mics2012bibliography.bib
+Warning--entry type for "cloj:structs" isn't style-file defined
+--line 39 of file mics2012bibliography.bib
 Warning--empty booktitle in halloway:better
-You've used 3 entries,
+You've used 5 entries,
             2253 wiz_defined-function locations,
-            540 strings with 4105 characters,
-and the built_in function-call counts, 659 in all, are:
-= -- 55
-> -- 21
+            546 strings with 4176 characters,
+and the built_in function-call counts, 1069 in all, are:
+= -- 89
+> -- 35
 < -- 0
-+ -- 9
-- -- 6
-* -- 30
-:= -- 112
-add.period$ -- 8
-call.type$ -- 3
-change.case$ -- 12
++ -- 15
+- -- 10
+* -- 50
+:= -- 176
+add.period$ -- 12
+call.type$ -- 5
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 30
-empty$ -- 70
-format.name$ -- 6
-if$ -- 137
+cite$ -- 6
+duplicate$ -- 46
+empty$ -- 116
+format.name$ -- 10
+if$ -- 225
 int.to.chr$ -- 0
-int.to.str$ -- 3
+int.to.str$ -- 5
 missing$ -- 1
-newline$ -- 17
-num.names$ -- 6
-pop$ -- 27
+newline$ -- 25
+num.names$ -- 10
+pop$ -- 45
 preamble$ -- 1
-purify$ -- 9
+purify$ -- 15
 quote$ -- 0
-skip$ -- 20
+skip$ -- 36
 stack$ -- 0
-substring$ -- 15
-swap$ -- 5
+substring$ -- 25
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 20
 warning$ -- 1
-while$ -- 6
-width$ -- 4
-write$ -- 29
-(There were 2 warnings)
+while$ -- 10
+width$ -- 6
+write$ -- 45
+(There were 4 warnings)

@@ -105,15 +105,34 @@ adams601@morris.umn.edu
 \setcounter{page}{1}
 
 \section{An Introduction to Clojure}\label{sec:intro}
-	Clojure is a programming language released in 2007 by Rich Hickey \cite{wiki}. Clojure is part of the LISP family of languages. Some brief examples of LISP-like syntax for those unfamiliar are:
+	Clojure is a programming language released in 2007 by Rich Hickey \cite{wiki}. Clojure is part of the LISP family of languages. Some brief examples of LISP-like syntax are:
 	\begin{verbatim}
 	(+ 2 3)
 	\end{verbatim}
 	Clojure uses prefix notation. To call a function you open a new list, the first thing in this list is the function name followed by the arguments. In the above case the function "+" takes in the two ints 2 and 3 and will return 5. Also note that:
 	\begin{verbatim}
 	(+ 2 3 4)
-	\end{verbatim}
-	Is a valid function call that returns 9. Clojure supports defining functions with a variable number of arguments. Clojure also includes several very powerful features for working with functions. The first allows for functions to be passed to other functions. 
+	\end{verbatim} 
+	
+	is a valid function call that returns 9. Clojure supports defining functions with a variable number of arguments. 
+	
+	Many of Clojure's data structures are the corresponding Java data structure; strings, characters, and numbers are just the Java implementations\cite{cloj:structs}. Clojure collections, however, are not Java collections. Clojure implements its own collections, each of these collections are denoted by different bracket types, table~\ref{coll:table} shows which literals correspond to each collection.
+	
+	\begin{table}[b]
+	\caption{Clojure collection literals\label{coll:table}}	
+	\begin{tabular}{ | l | c | }
+	\hline
+	Collection Type & Literal \\ \hline
+	List & (1 2 3 4) \\ \hline
+	Vector & ["apple" "banana" "orange"] \\ \hline
+	Hashmap & \{ :address "1234 Baker St." :City Springfield :Zip 12345 \} \\ \hline
+	Set & \#\{67 2 8.8 -78 \} \\
+	\hline
+	\end{tabular}
+	\end{table}	
+	Clojure code is also Clojure data types. Function calls are just lists that consist of a symbol corresponding to a function name and the arguments to that function.
+	
+	Clojure also includes several very powerful features for working with functions. The first allows for functions to be passed to other functions. 
 	\begin{verbatim}
 		(defn square [x] 
 		  (* x x))
@@ -125,16 +144,16 @@ adams601@morris.umn.edu
 	Clojure also supports anonymous functions. 
 	\begin{verbatim}
 	(defn all-same [vect]
-      (cond 
+      (if 
         (empty? vect) true
-        :else (every? (fn [x] (= (first vect) x)) (rest vect)) 
+        (every? (fn [x] (= (first vect) x)) (rest vect)) 
       )
     )
 	\end{verbatim}
-	This example function takes in a vector and checks if every element in that vector is the same. The "fn" function tells the compiler that a new function is being defined within the current scope (in this case the scope is the function all-same.) In this case the anonymous function takes the first element of vect and checks if it is equal to the argument x. The outer function every? takes a function and a collection, and returns true if the function returns true for every element in the collection. Using an anonymous function here allows for the function passed to every? to use the first element in vect which would not be available to another function because it would be out of scope.
+	This example function takes in a vector and checks if every element in that vector is the same. Clojure's if is a function that takes in three arguments the first is the condition which if it evaluates to true the second argument is returned otherwise the third argument is returned. The "fn" function tells the compiler that a new function is being defined within the current scope (in this case the scope is the function all-same.) In this case the anonymous function takes the first element of vect and checks if it is equal to the argument x. The outer function every? takes a function and a collection, and returns true if the function returns true for every element in the collection. Using an anonymous function here allows for the function passed to every? to use the first element in vect which would not be available to another function because it would be out of scope. First and rest just return the first element in the vector and the vector without the first element respectively.
 
 \section{Current Java Interoperability}\label{sec:bg}
-	A major feature of Clojure is that it runs on the JVM. Since Clojure and Java code both compile down to JVM bytecode Clojure can call code written in Java. I will now briefly go over the primary methods for calling Java code.
+	A major feature of Clojure is that it runs on the JVM. One of the main features that Rich Hickey wanted to have when he was first designing Clojure was complete compatibility with Java and its extensive library. Since Clojure and Java code both compile down to JVM bytecode Clojure can call code written in Java. I will now briefly go over the primary methods for calling Java code.
 	
 	\subsection{The Dot Special form}
 	The simplest way to call Java methods is with the dot(".") special form. The dot special form will first take a class member or class name then a method name then the arguments the method takes \cite{cloj:interop}. Here are a few examples of the dot in use.
@@ -162,7 +181,7 @@ adams601@morris.umn.edu
 	;;Returns #<StringBuffer fred>
 	\end{verbatim} 
 	
-	To quickly modify an object the macro doto is available \footnote[1]{A macro is a textual substitution. Essentially it maps an input pattern to an output pattern before any evaluation happens}. The doto first takes a call to new, then performs the rest of the supplied arguments on that object, and finally returns the resulting object.
+	To quickly modify an object the macro doto is available. A macro is a textual transformation. Essentially a macro expands from one piece of code to another. The doto first takes a call to new, then performs the rest of the supplied arguments on that object, and finally returns the resulting object.
 	\begin{verbatim}
 	(doto (new StringBuffer "fred") 
 	  (.setCharAt 0 \F) (.append " is a nice guy!"))
@@ -171,7 +190,7 @@ adams601@morris.umn.edu
 	Doto is very handy for doing sequences of set methods right after you construct an object.
 	
 	\subsection{Making Objects in Clojure}
-	There are problems that cannot be effectively solved without creating custom classes. In particular gui programming in swing is quite difficult without the ability to extend the standard swing classes. Proxy and gen-class are the two functions provided by Clojure to implement, extend, or create Java classes. 
+	There are problems that cannot be effectively solved without creating custom classes. In particular gui programming in swing, the primary Java gui tool, is quite difficult without the ability to extend the standard swing classes. Proxy and gen-class are the two functions provided by Clojure to implement, extend, or create Java classes. 
 	\subsubsection{Proxy}
 	It has been said that Clojure does Java better than Java\cite{halloway:better}. I think this is most true when using proxy. It is very common when programming in Swing in particular. When creating listeners to attach to buttons or other interactive interface devices it is very common to implement many different listeners. Proxy simplifies this process by allowing you to define a single superclass with methods that will work for your interface in most circumstances; and when you need to attach a listener instead of creating an entirely new subclass use proxy to create a new class that overwrites a few methods and inherits the rest. 
 	
@@ -186,12 +205,49 @@ adams601@morris.umn.edu
 	\end{verbatim}
 	This interface is in a separate interface file and is then imported into the following Clojure file.
 	\begin{verbatim}
-	(def test-inter (proxy [TestInterface] [] (square [x] (* x x))))
+	(def test-inter 
+	  (proxy [TestInterface] [] (square [x] (* x x))))
 	(. test-inter square 5)
 	;;Returns 25
 	\end{verbatim}
+	There can be more functions than just square but they have to be defined in the interface as well.
 	
+	\subsubsection{Gen-class}
+	Proxy is limited by what is defined in a super class or Java interface, on the other hand, gen-class is designed for implementing fully featured Java classes. Gen-class consists of a set of options which are represented as key value pairs. The keys consist of Clojure keywords which are just symbols that begin with a ":." Gen-class currently supports fifteen different options, I will only cover a select few. The example below was take from~\cite{docs:genClass}:
 	
+	\begin{verbatim}
+	(gen-class
+      :name com.example.Demo
+      :init init
+      :prefix "-"
+      :main false
+      :methods [[setLocation [String] void]
+                [getLocation [] String]])
+
+;; when we are created we can set defaults if we want.
+(defn -init []
+  "store our fields as a hash"
+  [[] (atom {:location "default"})])
+
+;; little functions to safely set the fields.
+(defn setfield
+  [this key value]
+      (swap! (.state this) into {key value}))
+
+(defn getfield
+  [this key]
+  (@(.state this) key))
+
+;; "this" is just a parameter, not a keyword
+(defn -setLocation [this loc]
+  (setfield this :location loc))
+
+(defn  -getLocation
+  [this]
+  (getfield this :location))
+	\end{verbatim}
+	
+	This is a small sample of how gen-class's syntax works. The gen-class
 \section{Suggestions}\label{sec:sugg}
 
 \section{Conclusion and Future Work}\label{sec:con}
