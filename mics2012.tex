@@ -213,41 +213,52 @@ adams601@morris.umn.edu
 	There can be more functions than just square but they have to be defined in the interface as well.
 	
 	\subsubsection{Gen-class}
-	Proxy is limited by what is defined in a super class or Java interface, on the other hand, gen-class is designed for implementing fully featured Java classes. Gen-class consists of a set of options which are represented as key value pairs. The keys consist of Clojure keywords which are just symbols that begin with a ":." Gen-class currently supports fifteen different options, I will only cover a select few. The example below was take from~\cite{docs:genClass}:
+	Proxy is limited by what is defined in a super class or Java interface, on the other hand, gen-class is designed for implementing fully featured Java classes. Gen-class consists of a set of options which are represented as key value pairs. The keys consist of Clojure keywords which are just symbols that begin with a ":." Gen-class currently supports fifteen different options. I will only cover a select few of these options here, the complete specification can be found in \cite{docs:genClass} or \cite{api:genClass}. The examples below were taken from~\cite{kotka}:
 	
 	\begin{verbatim}
+	(ns some.Example)
 	(gen-class
-      :name com.example.Demo
-      :init init
-      :prefix "-"
-      :main false
-      :methods [[setLocation [String] void]
-                [getLocation [] String]])
-
-;; when we are created we can set defaults if we want.
-(defn -init []
-  "store our fields as a hash"
-  [[] (atom {:location "default"})])
-
-;; little functions to safely set the fields.
-(defn setfield
-  [this key value]
-      (swap! (.state this) into {key value}))
-
-(defn getfield
-  [this key]
-  (@(.state this) key))
-
-;; "this" is just a parameter, not a keyword
-(defn -setLocation [this loc]
-  (setfield this :location loc))
-
-(defn  -getLocation
-  [this]
-  (getfield this :location))
+	  :prefix method-)
+	  
+	(defn method-toString
+	  [this]
+	  "Hello, world!")
+	  
 	\end{verbatim}
 	
-	This is a small sample of how gen-class's syntax works. The gen-class
+	After the call to gen-class itself are the methods that are associated with the type defined by the gen-class call. This is a fairly simple example but it gives the basic idea of how gen-class works. The only option that this class uses is the prefix option. This option defines what each method that corresponds to the class must begin with. When you want to call the method on the object you would use the following code:
+	
+	\begin{verbatim}
+	(def aClass (new some.Example))
+	;;This constructs a new instance of the object
+	(.toString aClass)
+	;;This returns the string "Hello, world!" because the method-toString function 
+	;;in the class definition has the correct prefix for the object.
+	\end{verbatim}
+	
+	This does not make a lot of sense until you see that multiple classes can be defined in a single file.
+	
+	\begin{verbatim}
+	(ns some.Example)
+	
+	(gen-class
+	  :name  some.Example.classA
+	  :prefix classA- )
+	  
+	(gen-class
+	  :name some.Example.classB
+	  :prefix classB- )
+	  
+	(defn classA-toString
+	  [this]
+	  "I'm an A.")
+	  
+    (defn classB-toString
+	  [this]
+	  "I'm an B.")
+	\end{verbatim}
+	
+	When you call toString on one of these objects it will return the correct result depending on the type of the object in question. 
 \section{Suggestions}\label{sec:sugg}
 
 \section{Conclusion and Future Work}\label{sec:con}
