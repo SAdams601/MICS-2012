@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  19 MAR 2012 20:40
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  19 MAR 2012 21:09
 entering extended mode
  %&-line parsing enabled.
 **mics2012.tex
@@ -271,23 +271,19 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
  [1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
- [2] [3]
+ [2] [3] [4]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 236.
- [4] [5]
-<images/choosingtypeforms.png, id=24, 586.19pt x 759.83875pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 243.
+ [5] [6]
+<images/choosingtypeforms.png, id=28, 586.19pt x 759.83875pt>
 File: images/choosingtypeforms.png Graphic file (type png)
 
-<use images/choosingtypeforms.png> [6] [7 <./images/choosingtypeforms.png>]
+<use images/choosingtypeforms.png> [7 <./images/choosingtypeforms.png>]
 (./mics2012.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-) [8] (./mics2012.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) [8] (./mics2012.aux) ) 
 Here is how much of TeX's memory you used:
  3582 strings out of 256216
  43259 string characters out of 1917072
@@ -296,11 +292,12 @@ Here is how much of TeX's memory you used:
  22495 words of font info for 52 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  25i,8n,24p,1084b,265s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/b
-luesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/urw/courier/ucrr8a.pfb></usr
-/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mics2012.pdf (9 pages, 192530 bytes).
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/sha
+re/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/urw/co
+urier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share
+/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on mics2012.pdf (9 pages, 192822 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
