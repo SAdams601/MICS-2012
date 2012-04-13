@@ -1,0 +1,13 @@
+\beamer@endinputifotherversion {3.07pt}
+\select@language {english}
+\beamer@sectionintoc {2}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {3}{Introduction to Clojure}{11}{0}{2}
+\beamer@subsubsectionintoc {0}{3}{0}{1}{11}{2}{Basic Clojure syntax}
+\beamer@sectionintoc {4}{Functional Programming in Clojure}{18}{0}{3}
+\beamer@subsubsectionintoc {0}{4}{0}{2}{19}{3}{First Class Functions in Clojure}
+\beamer@subsubsectionintoc {0}{4}{0}{3}{22}{3}{Anonymous Functions in Clojure}
+\beamer@sectionintoc {5}{Java Interop}{23}{0}{4}
+\beamer@subsectionintoc {5}{1}{Basic Java calling}{24}{0}{4}
+\beamer@subsectionintoc {5}{2}{Java Objects in Clojure}{28}{0}{4}
+\beamer@subsectionintoc {5}{3}{Custom types in Clojure}{31}{0}{4}
+\beamer@sectionintoc {6}{Conclusion \& References}{44}{0}{5}

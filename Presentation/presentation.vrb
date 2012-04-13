@@ -1,0 +1,17 @@
+\begin {verbatim}
+(gen-class
+  :name  some.Example.classA
+  :prefix classA- )
+
+(gen-class
+  :name some.Example.classB
+  :prefix classB- )
+
+(defn classA-toString
+  [this]
+  "I'm an A.")
+
+(defn classB-toString
+  [this]
+  "I'm an B.")
+\end{verbatim}
