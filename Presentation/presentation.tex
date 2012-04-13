@@ -47,7 +47,7 @@
 		\end{itemize}
 	\end{frame}
 		
-	\begin{frame}
+	\begin{frame}{Clojure}
 		The Clojure programming language was released in 2007 by the software developer Rich Hickey. Clojure was designed with four features in mind:
 		\pause
 		\begin{block}{The Four Features of Clojure}
@@ -108,11 +108,12 @@
 		\begin{verbatim}
 		(+ 2 3 4)
 		=> 9
+
 		(inc 4)
 		=> 5
 		\end{verbatim}
 		\end{frame}
-		
+		\subsubsection{Data Structures and Collections}	
 		\begin{frame}[fragile]
 		\frametitle{Clojure Data Structures}
 			\begin{itemize}			
@@ -309,25 +310,25 @@
 		\begin{frame}{Many ways of defining a type}
 		\tiny By Chas Emerick, from: http://bit.ly/IiozRP		
 		\begin{center}
-			\includegraphics[scale=.2]{choosingtypeforms.png}
+			\includegraphics[scale=.15]{choosingtypeforms.png}
 		\end{center}
 		\end{frame}
 		
 		\begin{frame}{Many ways of defining a type}
 		\begin{center}
-			\includegraphics[scale=.15]{choosingtypeformszoom.png}
+			\includegraphics[scale=.2]{choosingtypeformszoom.png}
 		\end{center}
 		\end{frame}
 		
-		\begin{frame}{The Java interop zone}
-			Clojure functions designed to work with existing Java code.
-			\begin{block}{The interop zone}
-			\begin{itemize}			
-			\item proxy
-			\item gen-class
-			\end{itemize}
-			\end{block}
-		\end{frame}
+		%\begin{frame}{The Java interop zone}
+			%Clojure functions designed to work with existing Java code.
+			%\begin{block}{The interop zone}
+			%\begin{itemize}			
+			%\item proxy
+			%\item gen-class
+			%\end{itemize}
+			%\end{block}
+		%\end{frame}
 
 	
 	\begin{frame}{Proxy}
@@ -362,9 +363,10 @@
 	\begin{verbatim}
 	(defn add-mousepressed-listener
      [component func args]
-      (let [listener (proxy [MouseAdapter] []
-                     (mousePressed [event]
-                        (apply func event args)))]
+      (let [listener 
+         (proxy [MouseAdapter] []
+            (mousePressed [event] 
+               (apply func event args)))]
       (.addMouseListener component listener)
     listener))
 	\end{verbatim}
@@ -373,16 +375,17 @@
 	\begin{frame}{Gen-class}
 	\begin{itemize}	
 	\item Proxy will only allow you to do so much because you can only overload functions defined by a super class or interface.
-	\pause
-	\item There are cases when defining your own Java methods and objects is necessary.
-	\item For instance working with a library that requires you to extend some object. 
+	\item Proxy also wont create a named type.
+        \pause
+	\item Without a named type Java is unable to call Clojure code. 
 	\end{itemize}
 	\end{frame}
 	
 	\begin{frame}[fragile]
 	\frametitle{Gen-class cont.}
 		\begin{verbatim}
-	  (gen-class 
+	  (gen-class
+	      :name   some.Example 
 	      :prefix "method-"))
 	  
 	(defn method-toString
@@ -420,7 +423,7 @@
 	
 	\section{Conclusion \& References}
 	\begin{frame}{Java - Clojure Relationship}
-	"Clojure does Java better than Java" - Stuart Halloway, at the Greater Atlanta Software Symposium, 2009.
+	"Clojure does Java better than Java" - Halloway
 	\linebreak
 	Proxy is an example of this.
 	\end{frame}

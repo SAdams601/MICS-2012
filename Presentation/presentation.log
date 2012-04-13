@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  13 APR 2012 00:27
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  13 APR 2012 09:35
 entering extended mode
  %&-line parsing enabled.
 **presentation.tex
@@ -864,7 +864,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 136.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 137.
  [15
 
 ]
@@ -931,61 +931,54 @@ Overfull \hbox (27.77972pt too wide) in paragraph at lines 10--10
 
 ) [30
 
-] <choosingtypeforms.png, id=1065, 1545.775pt x 1154.3125pt>
+] <choosingtypeforms.png, id=1066, 1545.775pt x 1154.3125pt>
 File: choosingtypeforms.png Graphic file (type png)
 
 <use choosingtypeforms.png>
-Overfull \hbox (1.85965pt too wide) in paragraph at lines 314--314
- [] 
- []
-
-
-Overfull \vbox (74.70288pt too high) detected at line 314
+Overfull \vbox (11.24681pt too high) detected at line 315
  []
 
 [31
 
  <./choosingtypeforms.png>]
-<choosingtypeformszoom.png, id=1103, 1261.71375pt x 1038.88126pt>
+<choosingtypeformszoom.png, id=1104, 1261.71375pt x 1038.88126pt>
 File: choosingtypeformszoom.png Graphic file (type png)
 
-<use choosingtypeformszoom.png> [32
+<use choosingtypeformszoom.png>
+Overfull \vbox (41.61703pt too high) detected at line 321
+ []
+
+[32
 
  <./choosingtypeformszoom.png>] [33
 
 ]
-[34
-
-]
 \openout3 = `presentation.vrb'.
 
- (./presentation.vrb
-Overfull \hbox (21.20973pt too wide) in paragraph at lines 10--10
-[]                        \T1/pcr/m/n/10.95 (apply func event args)))][] 
- []
+ (./presentation.vrb) [34
 
-) [35
+] [35
 
 ] [36
 
-] [37
-
-]
-\openout3 = `presentation.vrb'.
-
- (./presentation.vrb) [38
-
-] (./presentation.vrb) [39
-
 ]
 \openout3 = `presentation.vrb'.
 
 
-(./presentation.vrb)
-Overfull \vbox (9.902pt too high) detected at line 419
+(./presentation.vrb) [37
+
+] (./presentation.vrb) [38
+
+]
+\openout3 = `presentation.vrb'.
+
+ (./presentation.vrb)
+Overfull \vbox (9.902pt too high) detected at line 422
  []
 
-[40
+[39
+
+] [40
 
 ] [41
 
@@ -994,8 +987,6 @@ Overfull \vbox (9.902pt too high) detected at line 419
 ] [43
 
 ] [44
-
-] [45
 
 ]
 \tf@nav=\write6
@@ -1010,19 +1001,22 @@ Overfull \vbox (9.902pt too high) detected at line 419
  (./presentation.aux) ) 
 Here is how much of TeX's memory you used:
  11527 strings out of 256216
- 202533 string characters out of 1917072
+ 202543 string characters out of 1917072
  295015 words of memory out of 1500000
  14292 multiletter control sequences out of 10000+200000
  43312 words of font info for 61 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  41i,19n,56p,330b,585s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/shar
-e/texmf/fonts/type1/bluesky/ams/msam7.pfb></usr/share/texmf/fonts/type1/urw/cou
-rier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
-re/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on presentation.pdf (45 pages, 725701 bytes).
+pdfTeX warning (dest): name{Navigation45} has been refer
+enced but does not exist, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/blu
+esky/ams/msam7.pfb></usr/share/texmf/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
+hare/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/ur
+w/helvetic/uhvr8a.pfb>
+Output written on presentation.pdf (44 pages, 718387 bytes).
 PDF statistics:
- 1619 PDF objects out of 1728 (max. 8388607)
+ 1586 PDF objects out of 1728 (max. 8388607)
  103 named destinations out of 1000 (max. 131072)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

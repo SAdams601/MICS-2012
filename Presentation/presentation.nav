@@ -27,6 +27,7 @@
 \headcommand {\beamer@subsubsectionentry {0}{3}{0}{1}{11}{Basic Clojure syntax}}
 \headcommand {\slideentry {3}{0}{9}{11/12}{}{0}}
 \headcommand {\beamer@framepages {11}{12}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{0}{2}{13}{Data Structures and Collections}}
 \headcommand {\slideentry {3}{0}{10}{13/14}{}{0}}
 \headcommand {\beamer@framepages {13}{14}}
 \headcommand {\slideentry {3}{0}{11}{15/15}{}{0}}
@@ -40,10 +41,10 @@
 \headcommand {\beamer@subsectionpages {11}{17}}
 \headcommand {\slideentry {4}{0}{14}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@subsubsectionentry {0}{4}{0}{2}{19}{First Class Functions in Clojure}}
+\headcommand {\beamer@subsubsectionentry {0}{4}{0}{3}{19}{First Class Functions in Clojure}}
 \headcommand {\slideentry {4}{0}{15}{19/21}{}{0}}
 \headcommand {\beamer@framepages {19}{21}}
-\headcommand {\beamer@subsubsectionentry {0}{4}{0}{3}{22}{Anonymous Functions in Clojure}}
+\headcommand {\beamer@subsubsectionentry {0}{4}{0}{4}{22}{Anonymous Functions in Clojure}}
 \headcommand {\slideentry {4}{0}{16}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
 \headcommand {\sectionentry {5}{Java Interop}{23}{Java Interop}{0}}
@@ -70,17 +71,17 @@
 \headcommand {\beamer@framepages {33}{33}}
 \headcommand {\slideentry {5}{3}{4}{34/34}{Custom types in Clojure}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\slideentry {5}{3}{5}{35/35}{Custom types in Clojure}{0}}
-\headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {5}{3}{6}{36/37}{Custom types in Clojure}{0}}
-\headcommand {\beamer@framepages {36}{37}}
-\headcommand {\slideentry {5}{3}{7}{38/39}{Custom types in Clojure}{0}}
-\headcommand {\beamer@framepages {38}{39}}
-\headcommand {\slideentry {5}{3}{8}{40/40}{Custom types in Clojure}{0}}
+\headcommand {\slideentry {5}{3}{5}{35/36}{Custom types in Clojure}{0}}
+\headcommand {\beamer@framepages {35}{36}}
+\headcommand {\slideentry {5}{3}{6}{37/38}{Custom types in Clojure}{0}}
+\headcommand {\beamer@framepages {37}{38}}
+\headcommand {\slideentry {5}{3}{7}{39/39}{Custom types in Clojure}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\sectionentry {6}{Conclusion \& References}{40}{Conclusion \& References}{0}}
+\headcommand {\beamer@sectionpages {23}{39}}
+\headcommand {\beamer@subsectionpages {31}{39}}
+\headcommand {\slideentry {6}{0}{8}{40/40}{}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\sectionentry {6}{Conclusion \& References}{41}{Conclusion \& References}{0}}
-\headcommand {\beamer@sectionpages {23}{40}}
-\headcommand {\beamer@subsectionpages {31}{40}}
 \headcommand {\slideentry {6}{0}{9}{41/41}{}{0}}
 \headcommand {\beamer@framepages {41}{41}}
 \headcommand {\slideentry {6}{0}{10}{42/42}{}{0}}
@@ -89,10 +90,8 @@
 \headcommand {\beamer@framepages {43}{43}}
 \headcommand {\slideentry {6}{0}{12}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\slideentry {6}{0}{13}{45/45}{}{0}}
-\headcommand {\beamer@framepages {45}{45}}
-\headcommand {\beamer@partpages {1}{45}}
-\headcommand {\beamer@subsectionpages {41}{45}}
-\headcommand {\beamer@sectionpages {41}{45}}
-\headcommand {\beamer@documentpages {45}}
-\headcommand {\def \inserttotalframenumber {34}}
+\headcommand {\beamer@partpages {1}{44}}
+\headcommand {\beamer@subsectionpages {40}{44}}
+\headcommand {\beamer@sectionpages {40}{44}}
+\headcommand {\beamer@documentpages {44}}
+\headcommand {\def \inserttotalframenumber {33}}
