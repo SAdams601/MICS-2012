@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  13 APR 2012 09:35
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  13 APR 2012 09:45
 entering extended mode
  %&-line parsing enabled.
 **presentation.tex
@@ -931,21 +931,21 @@ Overfull \hbox (27.77972pt too wide) in paragraph at lines 10--10
 
 ) [30
 
-] <choosingtypeforms.png, id=1066, 1545.775pt x 1154.3125pt>
+] <choosingtypeforms.png, id=1067, 1545.775pt x 1154.3125pt>
 File: choosingtypeforms.png Graphic file (type png)
 
 <use choosingtypeforms.png>
-Overfull \vbox (11.24681pt too high) detected at line 315
+Overfull \vbox (34.33794pt too high) detected at line 315
  []
 
 [31
 
  <./choosingtypeforms.png>]
-<choosingtypeformszoom.png, id=1104, 1261.71375pt x 1038.88126pt>
+<choosingtypeformszoom.png, id=1105, 1261.71375pt x 1038.88126pt>
 File: choosingtypeformszoom.png Graphic file (type png)
 
 <use choosingtypeformszoom.png>
-Overfull \vbox (41.61703pt too high) detected at line 321
+Overfull \vbox (10.45193pt too high) detected at line 321
  []
 
 [32
@@ -1000,23 +1000,20 @@ Overfull \vbox (9.902pt too high) detected at line 422
 
  (./presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 11527 strings out of 256216
- 202543 string characters out of 1917072
+ 11525 strings out of 256216
+ 202523 string characters out of 1917072
  295015 words of memory out of 1500000
- 14292 multiletter control sequences out of 10000+200000
+ 14291 multiletter control sequences out of 10000+200000
  43312 words of font info for 61 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  41i,19n,56p,330b,585s stack positions out of 5000i,500n,6000p,200000b,15000s
-pdfTeX warning (dest): name{Navigation45} has been refer
-enced but does not exist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/blu
-esky/ams/msam7.pfb></usr/share/texmf/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
-hare/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/ur
-w/helvetic/uhvr8a.pfb>
-Output written on presentation.pdf (44 pages, 718387 bytes).
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/shar
+e/texmf/fonts/type1/bluesky/ams/msam7.pfb></usr/share/texmf/fonts/type1/urw/cou
+rier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
+re/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on presentation.pdf (44 pages, 718453 bytes).
 PDF statistics:
- 1586 PDF objects out of 1728 (max. 8388607)
- 103 named destinations out of 1000 (max. 131072)
+ 1585 PDF objects out of 1728 (max. 8388607)
+ 102 named destinations out of 1000 (max. 131072)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
