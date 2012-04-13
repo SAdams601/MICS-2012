@@ -78,7 +78,7 @@
 		\end{itemize}
 	\end{frame}
 	
-	\begin{frame}{Who Clojure is for}
+	\begin{frame}{Who Clojure is for?}
 			\begin{itemize}
 				\item Need to parallelize your work?
 				\item Are you tired of Java?
@@ -108,6 +108,8 @@
 		\begin{verbatim}
 		(+ 2 3 4)
 		=> 9
+		(inc 4)
+		=> 5
 		\end{verbatim}
 		\end{frame}
 		
@@ -336,24 +338,24 @@
 	\end{itemize}
 	\end{frame}	
 
-	\begin{frame}[fragile]
-	\frametitle{Proxy cont.}
-	\begin{verbatim}
-	public interface TestInterface {
-		int square(int x);
-	}
-	\end{verbatim}
-	\pause
-	\begin{verbatim}
-	(def test-inter 
-	  (proxy [TestInterface] [] (square [x] (* x x))))
-	\end{verbatim}
-	\pause
-	\begin{verbatim}
-	(. test-inter square 5)
-	=> 25
-	\end{verbatim}
-	\end{frame}
+	%\begin{frame}[fragile]
+	%\frametitle{Proxy cont.}
+	%\begin{verbatim}
+	%public interface TestInterface {
+	%	int square(int x);
+	%}
+	%\end{verbatim}
+	%\pause
+	%\begin{verbatim}
+	%(def test-inter 
+	%  (proxy [TestInterface] [] (square [x] (* x x))))
+	%\end{verbatim}
+	%\pause
+	%\begin{verbatim}
+	%(. test-inter square 5)
+	%=> 25
+	%\end{verbatim}
+	%\end{frame}
 	
 	\begin{frame}[fragile]
 	\frametitle{Proxy cont.}
@@ -443,7 +445,7 @@
 	\begin{frame}{Why this matters}
 		``The killer app for Clojure is the JVM itself. Everyone's fed up with the Java language, but understandably we don't want to abandon our investment in the Java Virtual Machine and its capabilities: the libraries, the configuration, the monitoring, and all the other entirely valid reasons we still use it."  
 		\newline
-		Steve Yegge, in the forward to Joy of Clojure.
+		Steve Yegge, in the foreward to Joy of Clojure.
 	\end{frame}
 	
 	\begin{frame}{References}

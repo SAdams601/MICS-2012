@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  12 APR 2012 23:58
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  13 APR 2012 00:27
 entering extended mode
  %&-line parsing enabled.
 **presentation.tex
@@ -864,7 +864,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 134.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 136.
  [15
 
 ]
@@ -935,12 +935,12 @@ Overfull \hbox (27.77972pt too wide) in paragraph at lines 10--10
 File: choosingtypeforms.png Graphic file (type png)
 
 <use choosingtypeforms.png>
-Overfull \hbox (1.85965pt too wide) in paragraph at lines 312--312
+Overfull \hbox (1.85965pt too wide) in paragraph at lines 314--314
  [] 
  []
 
 
-Overfull \vbox (74.70288pt too high) detected at line 312
+Overfull \vbox (74.70288pt too high) detected at line 314
  []
 
 [31
@@ -960,66 +960,42 @@ File: choosingtypeformszoom.png Graphic file (type png)
 \openout3 = `presentation.vrb'.
 
  (./presentation.vrb
-Overfull \hbox (21.20973pt too wide) in paragraph at lines 11--11
-[]  \T1/pcr/m/n/10.95 (proxy [TestInterface] [] (square [x] (* x x))))[] 
- []
-
-) [35
-
-] (./presentation.vrb
-Overfull \hbox (21.20973pt too wide) in paragraph at lines 11--11
-[]  \T1/pcr/m/n/10.95 (proxy [TestInterface] [] (square [x] (* x x))))[] 
- []
-
-) [36
-
-] (./presentation.vrb
-Overfull \hbox (21.20973pt too wide) in paragraph at lines 11--11
-[]  \T1/pcr/m/n/10.95 (proxy [TestInterface] [] (square [x] (* x x))))[] 
- []
-
-) [37
-
-]
-\openout3 = `presentation.vrb'.
-
- (./presentation.vrb
 Overfull \hbox (21.20973pt too wide) in paragraph at lines 10--10
 []                        \T1/pcr/m/n/10.95 (apply func event args)))][] 
  []
 
-) [38
+) [35
 
-] [39
+] [36
 
-] [40
+] [37
 
 ]
 \openout3 = `presentation.vrb'.
 
- (./presentation.vrb) [41
+ (./presentation.vrb) [38
 
-] (./presentation.vrb) [42
+] (./presentation.vrb) [39
 
 ]
 \openout3 = `presentation.vrb'.
 
 
 (./presentation.vrb)
-Overfull \vbox (9.902pt too high) detected at line 417
+Overfull \vbox (9.902pt too high) detected at line 419
  []
 
-[43
+[40
+
+] [41
+
+] [42
+
+] [43
 
 ] [44
 
 ] [45
-
-] [46
-
-] [47
-
-] [48
 
 ]
 \tf@nav=\write6
@@ -1033,10 +1009,10 @@ Overfull \vbox (9.902pt too high) detected at line 417
 
  (./presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 11541 strings out of 256216
- 202708 string characters out of 1917072
+ 11527 strings out of 256216
+ 202533 string characters out of 1917072
  295015 words of memory out of 1500000
- 14294 multiletter control sequences out of 10000+200000
+ 14292 multiletter control sequences out of 10000+200000
  43312 words of font info for 61 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  41i,19n,56p,330b,585s stack positions out of 5000i,500n,6000p,200000b,15000s
@@ -1044,9 +1020,9 @@ Here is how much of TeX's memory you used:
 e/texmf/fonts/type1/bluesky/ams/msam7.pfb></usr/share/texmf/fonts/type1/urw/cou
 rier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
 re/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on presentation.pdf (48 pages, 748477 bytes).
+Output written on presentation.pdf (45 pages, 725701 bytes).
 PDF statistics:
- 1726 PDF objects out of 1728 (max. 8388607)
- 109 named destinations out of 1000 (max. 131072)
+ 1619 PDF objects out of 1728 (max. 8388607)
+ 103 named destinations out of 1000 (max. 131072)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,4 +10,4 @@
 \beamer@subsectionintoc {5}{1}{Basic Java calling}{24}{0}{4}
 \beamer@subsectionintoc {5}{2}{Java Objects in Clojure}{28}{0}{4}
 \beamer@subsectionintoc {5}{3}{Custom types in Clojure}{31}{0}{4}
-\beamer@sectionintoc {6}{Conclusion \& References}{44}{0}{5}
+\beamer@sectionintoc {6}{Conclusion \& References}{41}{0}{5}
