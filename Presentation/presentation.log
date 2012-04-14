@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  13 APR 2012 23:10
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2011.3.24)  14 APR 2012 09:16
 entering extended mode
  %&-line parsing enabled.
 **presentation.tex
@@ -926,7 +926,7 @@ Overfull \hbox (27.77972pt too wide) in paragraph at lines 10--10
 
 ) [29
 
-] <choosingtypeforms.png, id=1038, 1545.775pt x 1154.3125pt>
+] <choosingtypeforms.png, id=1035, 1545.775pt x 1154.3125pt>
 File: choosingtypeforms.png Graphic file (type png)
 
 <use choosingtypeforms.png>
@@ -936,7 +936,7 @@ Overfull \vbox (34.33794pt too high) detected at line 319
 [30
 
  <./choosingtypeforms.png>]
-<choosingtypeformszoom.png, id=1075, 1261.71375pt x 1038.88126pt>
+<choosingtypeformszoom.png, id=1072, 1261.71375pt x 1038.88126pt>
 File: choosingtypeformszoom.png Graphic file (type png)
 
 <use choosingtypeformszoom.png>
@@ -987,35 +987,20 @@ Overfull \vbox (10.45193pt too high) detected at line 325
 
  (./presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 11522 strings out of 256216
- 202486 string characters out of 1917072
+ 11513 strings out of 256216
+ 202385 string characters out of 1917072
  295015 words of memory out of 1500000
- 14291 multiletter control sequences out of 10000+200000
+ 14287 multiletter control sequences out of 10000+200000
  43312 words of font info for 61 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  41i,19n,56p,330b,585s stack positions out of 5000i,500n,6000p,200000b,15000s
-pdfTeX warning (dest): name{Navigation43} has been refer
-enced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation44} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.5.3.31} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.5.2.28} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.5.1.24} has been referenced but does not e
-xist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/blu
-esky/ams/msam7.pfb></usr/share/texmf/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
-hare/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/ur
-w/helvetic/uhvr8a.pfb>
-Output written on presentation.pdf (42 pages, 704434 bytes).
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/shar
+e/texmf/fonts/type1/bluesky/ams/msam7.pfb></usr/share/texmf/fonts/type1/urw/cou
+rier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
+re/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on presentation.pdf (42 pages, 704083 bytes).
 PDF statistics:
- 1523 PDF objects out of 1728 (max. 8388607)
- 103 named destinations out of 1000 (max. 131072)
+ 1517 PDF objects out of 1728 (max. 8388607)
+ 98 named destinations out of 1000 (max. 131072)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
