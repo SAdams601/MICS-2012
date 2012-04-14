@@ -54,7 +54,7 @@
 		\begin{itemize}
 			\item A Lisp
 			\item Functional programming
-			\item Symbiosis with an established platform
+			\item Symbiosis with an established platform (Java)
 			\item Designed for concurrency
 		\end{itemize}
 		\end{block}
@@ -71,14 +71,13 @@
 	
 	\begin{frame}{Functional Programming and concurrency}
 		\begin{itemize}
-		\item Functional languages have immutable data
-		\item No state = no side effects
+		\item Functional languages have immutable data by default
 		\item A function will always return the same results given the same arguments
 		\item Easier to predict behavior of a program in a concurrent environment
 		\end{itemize}
 	\end{frame}
 	
-	\begin{frame}{Who Clojure is for?}
+	\begin{frame}{Who is this talk for?}
 			\begin{itemize}
 				\item Need to parallelize your work?
 				\item Are you tired of Java?
@@ -88,7 +87,7 @@
 			\end{itemize}
 	\end{frame}
 	
-	\begin{frame}{Who this talk is for}
+	\begin{frame}{Who is this talk is for?}
 	"Clojure does Java better than Java" - Stuart Halloway, at the Greater Atlanta Software Symposium, 2009.
 	\end{frame}
 		
@@ -134,21 +133,26 @@
 				\end{tabular}
 				\end{table}
 			\end{block}
+			\begin{itemize}
+			\item Keywords are symbolic identifiers, denoted with a leading colon.
+			\item Provide very fast equality tests
+			\end{itemize}
+
 		\end{frame}
 		
-		\begin{frame}[fragile]
-		\frametitle{Keywords}
-		\begin{itemize}
-			\item Symbolic identifiers, denoted with a leading colon
-			\item The colon is not considered part of the keyword
-			\item Keywords evaluate to themselves
-			\item Very fast equality tests 
-		\end{itemize}
-		\begin{verbatim}
-		:keyword
-		=> :keyword
-		\end{verbatim}
-		\end{frame}
+		%\begin{frame}[fragile]
+		%\frametitle{Keywords}
+		%\begin{itemize}
+		%\item Symbolic identifiers, denoted with a leading colon
+		%\item The colon is not considered part of the keyword
+		%\item Keywords evaluate to themselves
+		%\item Very fast equality tests 
+		%\end{itemize}
+		%\begin{verbatim}
+		%:keyword
+		%=> :keyword
+		%\end{verbatim}
+		%\end{frame}
 		
 		\begin{frame}[fragile]
 		\frametitle{Variables and Functions}
@@ -264,7 +268,7 @@
 		(.toUpperCase "fred")
 		\end{verbatim}		
 		\pause
-		Accessing Static methods and fields
+		Accessing static methods and fields
 		\begin{verbatim}
 		(. Math PI)
 		=> 3.141592653589793
@@ -385,41 +389,41 @@
 	\frametitle{Gen-class cont.}
 		\begin{verbatim}
 	  (gen-class
-	      :name   some.Example 
-	      :prefix "method-"))
+	      :name   Example 
+	      :prefix "example-"))
 	  
-	(defn method-toString
+	(defn example-toString
 	  [this]
 	  "Hello, world!")
 	  
 	\end{verbatim}
 	\pause
 	\begin{verbatim}
-	(def aClass (new some.Example))
+	(def aClass (new Example))
 	(.toString aClass)
 	=> "Hello, world!"
 	\end{verbatim}
 	\end{frame}
 	
-	\begin{frame}[fragile]
-		\begin{verbatim}
-	(gen-class
-	  :name  some.Example.classA
-	  :prefix classA- )
-	  
-	(gen-class
-	  :name some.Example.classB
-	  :prefix classB- )
-	  
-	(defn classA-toString
-	  [this]
-	  "I'm an A.")
-	  
-	(defn classB-toString
-	  [this]
-	  "I'm an B.")
-	\end{verbatim}
-	\end{frame}
+	%\begin{frame}[fragile]
+	%	\begin{verbatim}
+	%(gen-class
+	%  :name  some.Example.classA
+	%  :prefix classA- )
+	%  
+	%(gen-class
+	%  :name some.Example.classB
+	%  :prefix classB- )
+	%  
+	%(defn classA-toString
+	%  [this]
+	%  "I'm an A.")
+	%  
+	%(defn classB-toString
+	%  [this]
+	%  "I'm an B.")
+	%\end{verbatim}
+	%\end{frame}
 	
 	\section{Conclusion \& References}
 	\begin{frame}{Java - Clojure Relationship}

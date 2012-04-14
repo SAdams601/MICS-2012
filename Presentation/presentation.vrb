@@ -1,17 +1,17 @@
-\begin {verbatim}
-(gen-class
-  :name  some.Example.classA
-  :prefix classA- )
+\frametitle {Gen-class cont.}
+\begin{verbatim}
+  (gen-class
+      :name   Example
+      :prefix "example-"))
 
-(gen-class
-  :name some.Example.classB
-  :prefix classB- )
-
-(defn classA-toString
+(defn example-toString
   [this]
-  "I'm an A.")
+  "Hello, world!")
 
-(defn classB-toString
-  [this]
-  "I'm an B.")
+\end{verbatim}
+\pause
+\begin{verbatim}
+(def aClass (new Example))
+(.toString aClass)
+=> "Hello, world!"
 \end{verbatim}
